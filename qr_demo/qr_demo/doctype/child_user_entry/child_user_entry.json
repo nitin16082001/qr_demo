@@ -1,0 +1,134 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-10-06 14:09:18.763574",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "customer_name",
+  "qr_code_data",
+  "finished_item",
+  "actual_stage",
+  "stage",
+  "column_break_aia9j",
+  "date",
+  "time",
+  "quantity",
+  "stage_name",
+  "column_break_dn9sa",
+  "user",
+  "shift",
+  "shift_incharge",
+  "pcb_side",
+  "process_count"
+ ],
+ "fields": [
+  {
+   "fieldname": "customer_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Customer Name"
+  },
+  {
+   "fieldname": "qr_code_data",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "QR Code Data"
+  },
+  {
+   "fieldname": "finished_item",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Finished Item"
+  },
+  {
+   "fieldname": "actual_stage",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Actual Stage"
+  },
+  {
+   "fieldname": "stage",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Process Number"
+  },
+  {
+   "fieldname": "column_break_aia9j",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Date "
+  },
+  {
+   "fieldname": "time",
+   "fieldtype": "Time",
+   "in_list_view": 1,
+   "label": "Time"
+  },
+  {
+   "fieldname": "quantity",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Quantity"
+  },
+  {
+   "fieldname": "stage_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Process Name"
+  },
+  {
+   "fieldname": "column_break_dn9sa",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "user",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "User"
+  },
+  {
+   "fieldname": "shift",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Shift"
+  },
+  {
+   "fieldname": "shift_incharge",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Shift Incharge"
+  },
+  {
+   "fieldname": "pcb_side",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "PCB Side"
+  },
+  {
+   "default": "0",
+   "fieldname": "process_count",
+   "fieldtype": "Check",
+   "hidden": 1,
+   "label": "Process Count"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2023-10-06 21:27:20.742273",
+ "modified_by": "Administrator",
+ "module": "QR Demo",
+ "name": "child User Entry",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

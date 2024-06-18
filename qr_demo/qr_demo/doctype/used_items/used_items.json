@@ -1,0 +1,180 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-10-06 13:48:25.760217",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "customer_name",
+  "scan",
+  "qr_code_data",
+  "finished_item",
+  "actual_stage",
+  "stage",
+  "select_stage_manually",
+  "column_break_gkh0p",
+  "date",
+  "current_time",
+  "quantity",
+  "quantity_update",
+  "column_break_q2u6l",
+  "user",
+  "shift",
+  "shift_incharge",
+  "section_break_70y6r",
+  "item_as_per_bom",
+  "status"
+ ],
+ "fields": [
+  {
+   "fieldname": "customer_name",
+   "fieldtype": "Link",
+   "label": "Customer Name",
+   "options": "Customer"
+  },
+  {
+   "fieldname": "scan",
+   "fieldtype": "Button",
+   "label": "Scan"
+  },
+  {
+   "fieldname": "qr_code_data",
+   "fieldtype": "Data",
+   "label": "QR Code Data"
+  },
+  {
+   "fieldname": "finished_item",
+   "fieldtype": "Link",
+   "label": "Finished Item",
+   "options": "BOM"
+  },
+  {
+   "fetch_from": "finished_item.stage",
+   "fieldname": "actual_stage",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "Actual Stage",
+   "options": "Stages"
+  },
+  {
+   "fieldname": "stage",
+   "fieldtype": "Link",
+   "label": "Stage",
+   "options": "Stages"
+  },
+  {
+   "default": "0",
+   "fieldname": "select_stage_manually",
+   "fieldtype": "Check",
+   "label": "Select Stage Manually"
+  },
+  {
+   "fieldname": "column_break_gkh0p",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Today",
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date "
+  },
+  {
+   "default": "Now",
+   "fieldname": "current_time",
+   "fieldtype": "Time",
+   "label": "Current Time"
+  },
+  {
+   "fieldname": "quantity",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Quantity",
+   "reqd": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "quantity_update",
+   "fieldtype": "Check",
+   "label": "Quantity Update"
+  },
+  {
+   "fieldname": "column_break_q2u6l",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "__user",
+   "fieldname": "user",
+   "fieldtype": "Data",
+   "label": "User"
+  },
+  {
+   "fieldname": "shift",
+   "fieldtype": "Select",
+   "label": "Shift",
+   "options": "1\n2\n3\nGeneral"
+  },
+  {
+   "fieldname": "shift_incharge",
+   "fieldtype": "Link",
+   "label": "Shift Incharge",
+   "options": "User"
+  },
+  {
+   "fieldname": "section_break_70y6r",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "item_as_per_bom",
+   "fieldtype": "Table",
+   "label": "Item as per BOM",
+   "options": "Item as per BOM"
+  },
+  {
+   "default": "0",
+   "fieldname": "status",
+   "fieldtype": "Int",
+   "hidden": 1,
+   "label": "Status"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-10-06 13:50:40.028019",
+ "modified_by": "Administrator",
+ "module": "QR Demo",
+ "name": "Used Items",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "select": 1,
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Administrator",
+   "select": 1,
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

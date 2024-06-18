@@ -1,0 +1,375 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-09-06 18:51:35.332251",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "customer_name",
+  "scan",
+  "qr_code_data",
+  "finished_item",
+  "actual_stage",
+  "stage",
+  "select_stage_manually",
+  "column_break_gkh0p",
+  "date",
+  "time",
+  "quantity",
+  "quantity_update",
+  "stage_name",
+  "column_break_q2u6l",
+  "user",
+  "shift",
+  "shift_incharge",
+  "pcb_side",
+  "add_entry",
+  "section_break_70y6r",
+  "item_as_per_bom",
+  "section_break_zi1qf",
+  "entry_catalog",
+  "required_item",
+  "section_break_egyw8",
+  "item_stage",
+  "status",
+  "section_break_vfehe",
+  "process_one",
+  "column_break_fpjol",
+  "process_two",
+  "column_break_u7ybh",
+  "process_three",
+  "column_break_gljoz",
+  "process_four",
+  "column_break_2xjz4",
+  "process_five",
+  "column_break_upaip",
+  "process_six",
+  "column_break_m9ta7",
+  "process_seven",
+  "column_break_rex8n",
+  "process_eight",
+  "column_break_hmc64",
+  "process_nine",
+  "column_break_hqvzy",
+  "process_ten",
+  "column_break_mtoya",
+  "process_eleven",
+  "column_break_sp57j",
+  "process_twelve"
+ ],
+ "fields": [
+  {
+   "fieldname": "stage",
+   "fieldtype": "Link",
+   "label": "Process Number",
+   "options": "Stages"
+  },
+  {
+   "fieldname": "finished_item",
+   "fieldtype": "Link",
+   "label": "Finished Item",
+   "options": "BOM"
+  },
+  {
+   "fieldname": "scan",
+   "fieldtype": "Button",
+   "label": "Scan"
+  },
+  {
+   "fieldname": "column_break_gkh0p",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Today",
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date "
+  },
+  {
+   "fieldname": "quantity",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Quantity",
+   "reqd": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "quantity_update",
+   "fieldtype": "Check",
+   "label": "Quantity Update"
+  },
+  {
+   "default": "__user",
+   "fieldname": "user",
+   "fieldtype": "Data",
+   "label": "User"
+  },
+  {
+   "fieldname": "section_break_70y6r",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "required_item",
+   "fieldtype": "Table",
+   "label": "Required Item",
+   "options": "Used Item"
+  },
+  {
+   "fieldname": "section_break_egyw8",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "item_stage",
+   "fieldtype": "Table",
+   "label": "Item Stage",
+   "options": "Item Stage"
+  },
+  {
+   "default": "0",
+   "fieldname": "status",
+   "fieldtype": "Int",
+   "hidden": 1,
+   "label": "Status"
+  },
+  {
+   "fieldname": "item_as_per_bom",
+   "fieldtype": "Table",
+   "label": "Item as per BOM",
+   "options": "Item as per BOM"
+  },
+  {
+   "fieldname": "section_break_zi1qf",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "qr_code_data",
+   "fieldtype": "Data",
+   "label": "QR Code Data"
+  },
+  {
+   "fetch_from": "finished_item.stage",
+   "fieldname": "actual_stage",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "Actual Stage",
+   "options": "Stages"
+  },
+  {
+   "default": "0",
+   "fieldname": "select_stage_manually",
+   "fieldtype": "Check",
+   "label": "Select Stage Manually"
+  },
+  {
+   "fieldname": "shift",
+   "fieldtype": "Select",
+   "label": "Shift",
+   "options": "1\n2\n3\nGeneral"
+  },
+  {
+   "fieldname": "column_break_q2u6l",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "shift_incharge",
+   "fieldtype": "Link",
+   "label": "Shift Incharge",
+   "options": "User"
+  },
+  {
+   "fieldname": "customer_name",
+   "fieldtype": "Link",
+   "label": "Customer Name",
+   "options": "Customer"
+  },
+  {
+   "fetch_from": "stage.name1",
+   "fieldname": "stage_name",
+   "fieldtype": "Data",
+   "label": "Process Name"
+  },
+  {
+   "default": "Now",
+   "fieldname": "time",
+   "fieldtype": "Time",
+   "label": "Time"
+  },
+  {
+   "fieldname": "pcb_side",
+   "fieldtype": "Select",
+   "label": "PCB Side",
+   "options": "\nTop Side\nBottom Side\nTop + Bottom"
+  },
+  {
+   "fieldname": "add_entry",
+   "fieldtype": "Button",
+   "label": "Add Entry"
+  },
+  {
+   "fieldname": "entry_catalog",
+   "fieldtype": "Table",
+   "label": "Entry Catalog",
+   "options": "child User Entry"
+  },
+  {
+   "fieldname": "section_break_vfehe",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "process_one",
+   "fieldtype": "Int",
+   "label": "Process One"
+  },
+  {
+   "default": "0",
+   "fieldname": "process_two",
+   "fieldtype": "Int",
+   "label": "Process Two"
+  },
+  {
+   "default": "0",
+   "fieldname": "process_three",
+   "fieldtype": "Int",
+   "label": "Process Three"
+  },
+  {
+   "default": "0",
+   "fieldname": "process_four",
+   "fieldtype": "Int",
+   "label": "Process Four"
+  },
+  {
+   "default": "0",
+   "fieldname": "process_five",
+   "fieldtype": "Int",
+   "label": "Process Five"
+  },
+  {
+   "default": "0",
+   "fieldname": "process_six",
+   "fieldtype": "Int",
+   "label": "Process Six"
+  },
+  {
+   "default": "0",
+   "fieldname": "process_seven",
+   "fieldtype": "Int",
+   "label": "Process Seven"
+  },
+  {
+   "default": "0",
+   "fieldname": "process_eight",
+   "fieldtype": "Int",
+   "label": "Process Eight"
+  },
+  {
+   "default": "0",
+   "fieldname": "process_nine",
+   "fieldtype": "Int",
+   "label": "Process Nine"
+  },
+  {
+   "default": "0",
+   "fieldname": "process_ten",
+   "fieldtype": "Int",
+   "label": "Process Ten"
+  },
+  {
+   "fieldname": "column_break_fpjol",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_u7ybh",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_gljoz",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_2xjz4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_upaip",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_m9ta7",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_rex8n",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_hmc64",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_hqvzy",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_mtoya",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "process_eleven",
+   "fieldtype": "Int",
+   "label": "Process Eleven"
+  },
+  {
+   "fieldname": "column_break_sp57j",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "process_twelve",
+   "fieldtype": "Int",
+   "label": "Process Twelve"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-10-06 16:04:25.918279",
+ "modified_by": "Administrator",
+ "module": "QR Demo",
+ "name": "Required Item For Finished Goods",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "select": 1,
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Administrator",
+   "select": 1,
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
